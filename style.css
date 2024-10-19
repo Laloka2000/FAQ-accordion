@@ -76,7 +76,10 @@ body {
     padding: 20px;
   }
   .body{
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
     background-size: 100%;
-    background-position-y: -200px;
+    background-position-y: 500px;
   }
 }
