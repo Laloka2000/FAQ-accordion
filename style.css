@@ -16,7 +16,7 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%;
-  background-position-y: -50px;
+  background-position-y: 0px;
 }
 
 .container {
@@ -36,20 +36,14 @@ body {
 
 .accordion {
   background-color: white;
-  color: #444;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
+  font-size: 17px;
   transition: 0.4s;
-  font-size: 16px;
-  font-family: "Work Sans", sans-serif;
-  background-image: url("./assets/images/icon-plus.svg");
-  background-repeat: no-repeat;
-  background-position: right 20px center;
-  background-size: 30px;
 }
 
 .active,
@@ -57,7 +51,8 @@ body {
   background-color: #ccc;
 }
 
-accordion:after {
+.accordion:after {
+  content: url("./assets/images/icon-plus.svg");
   color: #777;
   font-weight: bold;
   float: right;
@@ -66,15 +61,22 @@ accordion:after {
 
 .active:after {
   content: url("./assets/images/icon-minus.svg");
-  float: right;
 }
 
 .panel {
   padding: 0 18px;
-  display: none;
   background-color: white;
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  font-size: 16px;
-  font-family: "Work Sans", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+  .body{
+    background-size: 100%;
+    background-position-y: -200px;
+  }
 }
